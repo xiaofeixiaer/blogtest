@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+{% extends 'blogtest1/base.html'%}
+{% block content %}
+    {% for post in posts %}
+        <h3><a href="{% url 'show' post.id %}">{{post.title}}</a></h3>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
